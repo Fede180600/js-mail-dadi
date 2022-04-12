@@ -16,3 +16,10 @@ for (let i = 0; i < userEmail.length; i++) {
 }
 console.log(emailFound);
 //Se non corrisponde stampare un messaggio sull'esito del controllo
+if (emailFound === true) {
+    document.getElementById("my-title").innerHTML = `Ciao ${userEmail} puoi eseguire l'accesso`;
+    console.log("L'utente può proseguire con l'accesso alla sua area personale");
+} else {
+    document.getElementById("my-title").innerHTML = `Ciao ${userEmail} non sei autorizzatto all'accesso`;
+    console.log("L'email utente non è valida")
+}
